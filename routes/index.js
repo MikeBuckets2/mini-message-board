@@ -24,4 +24,8 @@ router.get("/", (req, res) => {
   });
 });
 
+router.get("/new", (req, res) => {
+  res.render("form", { title: "New Message" });
+});
+
 module.exports = router;
