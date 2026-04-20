@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/styles/main.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <a href="/" class="site-logo">BOARD.</a>
+    <a href="/" class="header-btn">Back</a>
+  </header>
+
+  <main class="main">
+    <div class="page-top">
+      <h1 class="page-title">MESSAGE</h1>
+    </div>
+
+    <div class="detail-card">
+      <div class="detail-meta">
+        <div class="detail-meta-left">
+          <span class="detail-label">From</span>
+          <span class="detail-user"><%= message.user %></span>
+        </div>
+        <div class="detail-meta-right">
+          <span class="detail-label">Posted</span>
+          <span class="detail-date">
+            <%= message.added.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' }) %>
+          </span>
+        </div>
+      </div>
+      <div class="detail-body">
+        <p><%= message.text %></p>
+      </div>
+    </div>
+
+    <a href="/" class="back-link">Back to all messages</a>
+  </main>
+
+</body>
+</html>
