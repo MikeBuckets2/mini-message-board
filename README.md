@@ -4,16 +4,16 @@ A simple message board built with Node.js, Express, and EJS. Users can post mess
 
 ## Features
 
-Post messages with a name and text
-Messages display in reverse chronological order
-Individual detail page for each message
-Server-side rendering with EJS templates
+- Post messages with a name and text
+- Messages display in reverse chronological order
+- Individual detail page for each message
+- Server-side rendering with EJS templates
 
 ## Tech Stack
 
-Node.js
-Express
-EJS
+- Node.js
+- Express
+- EJS
 
 ## Notes
 
