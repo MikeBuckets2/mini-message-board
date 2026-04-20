@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/styles/main.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <span class="site-logo">BOARD.</span>
+    <a href="/new" class="header-btn">+ New Message</a>
+  </header>
+
+  <main class="main">
+    <div class="page-top">
+      <h1 class="page-title">ALL MESSAGES</h1>
+      <span class="message-count"><%= messages.length %> posts</span>
+    </div>
+
+    <div class="message-list">
+      <% if (messages.length === 0) { %>
+        <p class="empty-state">No messages yet. Be the first.</p>
+      <% } else { %>
+        <% messages.slice().reverse().forEach(function(message) { %>
+          <div class="message-card">
+            <div class="message-meta">
+              <span class="message-user"><%= message.user %></span>
+              <span class="message-date"><%= message.added.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) %></span>
+            </div>
+            <p class="message-text"><%= message.text %></p>
+            <a href="/message/<%= message.id %>" class="message-open">Open</a>
+          </div>
+        <% }); %>
+      <% } %>
+    </div>
+  </main>
+
+</body>
+</html>
