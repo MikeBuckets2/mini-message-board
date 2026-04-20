@@ -33,6 +33,7 @@ router.post("/new", (req, res) => {
   const messageUser = req.body.messageUser;
 
   messages.push({
+    id: messages.length + 1,
     text: messageText,
     user: messageUser,
     added: new Date(),
