@@ -1,0 +1,158 @@
+:root {
+  --bg: #f6f3ee;
+  --surface: #ffffff;
+  --surface-2: #f1ede7;
+
+  --accent: #b7791f;
+  --accent-soft: #e6d3b3;
+
+  --text: #2d2a26;
+  --text-muted: #7a756c;
+
+  --border: #e2ddd5;
+
+  --font: system-ui, sans-serif;
+}
+
+
+html, body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  line-height: 1.65;
+}
+
+
+.site-header {
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 2rem;
+  height: 64px;
+}
+
+.site-logo {
+  font-size: 0.9rem;
+  letter-spacing: 0.2em;
+  color: var(--text);
+}
+
+.header-btn {
+  font-size: 0.7rem;
+  border: 1px solid var(--border);
+  padding: 0.45rem 1.1rem;
+  background: transparent;
+}
+
+.header-btn:hover {
+  background: var(--surface-2);
+  border-color: var(--accent-soft);
+  color: var(--text);
+}
+
+
+.main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+
+.page-title {
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  color: var(--text-muted);
+}
+
+.message-count {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+
+.message-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 1.25rem 1.25rem;
+  border-radius: 10px;
+  margin-bottom: 0.75rem;
+
+  transition: transform 0.08s ease, box-shadow 0.08s ease;
+}
+
+.message-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.05);
+}
+
+
+.message-user {
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+}
+
+.message-date {
+  font-size: 0.75rem;
+}
+
+
+.message-text {
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+
+.message-open {
+  font-size: 0.65rem;
+  border: none;
+  background: var(--surface-2);
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+}
+
+.message-open:hover {
+  background: var(--accent-soft);
+  color: var(--text);
+}
+
+
+.form-group input,
+.form-group textarea {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--accent);
+}
+
+
+.submit-btn {
+  background: var(--accent);
+  color: white;
+  border-radius: 999px;
+  padding: 0.75rem 1.8rem;
+}
+
+.submit-btn:hover {
+  background: #9c641a;
+}
+
+
+.detail-card {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.detail-body {
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+
+.back-link {
+  border-bottom: 1px dashed var(--border);
+}
