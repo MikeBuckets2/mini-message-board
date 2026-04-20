@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/styles/main.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <a href="/" class="site-logo">BOARD.</a>
+    <a href="/" class="header-btn">Back</a>
+  </header>
+
+  <main class="main">
+    <div class="page-top">
+      <h1 class="page-title">NEW MESSAGE</h1>
+    </div>
+
+    <form class="message-form" method="POST" action="/new">
+      <div class="form-group">
+        <label for="messageUser">Your Name</label>
+        <input
+          type="text"
+          id="messageUser"
+          name="messageUser"
+          placeholder="Enter your name"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="messageText">Message</label>
+        <textarea
+          id="messageText"
+          name="messageText"
+          placeholder="Write something..."
+          required
+        ></textarea>
+      </div>
+      <button type="submit" class="submit-btn">Post Message</button>
+    </form>
+  </main>
+
+</body>
+</html>
