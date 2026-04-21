@@ -18,6 +18,14 @@
       <h1 class="page-title">NEW MESSAGE</h1>
     </div>
 
+    <% if (errors.length > 0) { %>
+      <ul class="error-list">
+        <% errors.forEach(function(error) { %>
+          <li><%= error %></li>
+        <% }); %>
+      </ul>
+    <% } %>
+
     <form class="message-form" method="POST" action="/new">
       <div class="form-group">
         <label for="messageUser">Your Name</label>
@@ -26,6 +34,7 @@
           id="messageUser"
           name="messageUser"
           placeholder="Enter your name"
+          value="<%= formData.messageUser || '' %>"
           required
         />
       </div>
@@ -36,7 +45,7 @@
           name="messageText"
           placeholder="Write something..."
           required
-        ></textarea>
+        ><%= formData.messageText || '' %></textarea>
       </div>
       <button type="submit" class="submit-btn">Post Message</button>
     </form>
