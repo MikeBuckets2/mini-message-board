@@ -156,3 +156,22 @@ html, body {
 .back-link {
   border-bottom: 1px dashed var(--border);
 }
+
+.error-list {
+  list-style: none;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 560px;
+}
+
+.error-list li {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--accent-warm);
+  border: 1px solid var(--border);
+  padding: 0.65rem 1rem;
+  background-color: var(--surface);
+}
